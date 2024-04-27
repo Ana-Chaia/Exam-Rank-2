@@ -12,7 +12,7 @@ char *ft_strpbrk(const char *s1, const char *s2)
     const char *s2_start = s2;  // salva a posição inicial de s2 para reutilização;
 
     if (!s1 || !s2)  // checa se algum dos ponteiros é NULL;
-        return NULL;  // retorna NULL se s1 ou s2 forem NULL;
+        return NULL;
     while (*s1)
     { 
         s2 = s2_start;  // reinicia s2 cada vez que um novo caractere de s1 é verificado;
@@ -24,7 +24,7 @@ char *ft_strpbrk(const char *s1, const char *s2)
         }
         s1++;  // avança para o próximo caractere de s1 quando s2 chegou no '\0';
     }
-    return NULL;  // Retorna NULL se nenhuma correspondência for encontrada;
+    return NULL;  // retorna NULL se nenhuma correspondência for encontrada;
 }
 
 //The strpbrk() function locates in the null-terminated string s the first occurrence of any character in the string charset and returns a pointer to this character.
