@@ -7,11 +7,12 @@
 //The function should be prototyped as follows:
 //size_t  ft_strcspn(const char *s, const char *reject);
 
+#include <stdio.h> // se não tiver, não passa no teste;
 
 size_t  ft_strcspn(const char *s, const char *reject)
 {
-    size_t i = 0;
-    size_t j;
+    int i = 0; // TIPOS TEM QUE SER INT;
+    int j;
 
     while (s[i]) //itera sobre cada caractere da string s;
     {

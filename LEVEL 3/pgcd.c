@@ -47,3 +47,33 @@ int main(int argc, char const **argv)
     printf("\n");
     return (0);
 }
+
+//The GCD (Greatest Common Divisor) of two numbers a and b is the largest positive integer that divides both a and b without leaving a remainder. It is not necessarily the smallest number, but it is always less than or equal to the smaller of the two numbers.
+// By starting with the smaller number, the maximum number of iterations is minimized. This approach improves efficiency while maintaining correctness, as the GCD will be found correctly within the fewer possible iterations. The GCD is always less than or equal to the smallest number among the inputs, hence starting with the smallest number is optimal. 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void pgcd(int a, int b)
+{
+    int n = (a < b) ? a : b; // Start with the smaller number
+
+    while (n > 0)
+    {
+        if (a % n == 0 && b % n == 0)
+        {
+            printf("%d", n);
+            return;
+        }
+        --n;
+    }
+}
+
+int main(int argc, char **argv)
+{
+    if (argc == 3)
+        pgcd(atoi(argv[1]), atoi(argv[2]));
+
+    printf("\n");
+    return (0);
+}

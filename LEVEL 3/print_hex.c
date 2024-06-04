@@ -33,7 +33,7 @@ void printhex(int n) // recebe o int da atoi para construir o hexa, por isso nã
 {
     char hex[] = "0123456789abcdef";
 
-    if(n >= 16) // se int for maior que 16, chama a função recursivamente até ele ser menor;
+    if(n >= 16) // se int for maior  ou igual a 16, chama a função recursivamente até ele ser menor;
         printhex(n / 16);
     write(1, &hex[n % 16], 1); // imprime o char na posição do módulo de 16;
 }

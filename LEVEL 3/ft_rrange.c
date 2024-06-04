@@ -18,7 +18,7 @@ Examples:
 
 int ft_rrange(int start, int end)
 {
-    int len = abs(end - start) +1;
+    int len = abs(end - start) +1; // len calcula o número de elementos no intervalo. abs(end - start) dá a diferença absoluta entre end e start, garantindo um valor positivo. O +1 garante que ambos os extremos, start e end, estejam incluídos no intervalo.
     int i = 0;
     int *range;
 
